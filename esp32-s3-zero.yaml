@@ -21,11 +21,11 @@ logger:
 # Enable Home Assistant API
 api:
   encryption:
-    key: "qE80lkl61SuTa8jjPEci379zGzxaePHz8sYKBGTA2Q0="
+    key: "XXX"
 
 ota:
   - platform: esphome
-    password: "917a73e1b09d0556cccab787cd1e6680"
+    password: "XXX"
 
 wifi:
   ssid: !secret wifi_ssid
@@ -33,8 +33,8 @@ wifi:
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
-    ssid: "XXXX"
-    password: "XXXX"
+    ssid: "XXX"
+    password: "XXX"
 
   output_power: 8.5dB # fix for S3 zero reboot issue
 
