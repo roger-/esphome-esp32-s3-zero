@@ -2,6 +2,7 @@ esphome:
   name: esp32-s3-zero-test
   friendly_name: esp32-s3-zero-test
 
+  # not sure if this is needed
   platformio_options:
     board_build.f_flash: 40000000L
     board_build.flash_mode: dio
@@ -11,6 +12,8 @@ esp32:
   board: esp32-s3-devkitc-1
   framework:
     type: esp-idf
+    
+    # below is for Bluetooth proxy, may not be needed
     sdkconfig_options:
       CONFIG_BT_BLE_42_FEATURES_SUPPORTED: y
       CONFIG_BT_BLE_50_FEATURES_SUPPORTED: n
@@ -35,8 +38,9 @@ wifi:
   ap:
     ssid: "XXX"
     password: "XXX"
-
-  output_power: 8.5dB # fix for S3 zero reboot issue
+    
+  # fix for S3 zero reboot issue; other values may work too
+  output_power: 8.5dB 
 
 captive_portal:
 
